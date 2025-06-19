@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "bd24f199-5556-4be3-beec-4af4f331a7d1",
+		"name": "APIs Registros Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45675324"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Crear alumno",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Eduardo Alvarez\",\r\n  \"fechaNacimiento\": \"1998-10-23\",\r\n  \"nombrePadre\": \"Roberto\",\r\n  \"nombreMadre\": \"Elena\",\r\n  \"gradoId\": 1,\r\n  \"seccion\": \"3\",\r\n  \"fechaIngreso\": \"2025-06-17\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/alumno/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumno",
+								"crear"
+							]
+						},
+						"description": "- Crea un nuevo alumno.\r\n- Requiere autenticacion mediante API Key.\r\n- Body requerido: (JSON)\r\n- Devuelve los datos del alumno creado en formato ResponseAlumnoDTO.\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un grado",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Tercero Primaria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/grado/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"grado",
+								"crear"
+							]
+						},
+						"description": "- Crea un nuevo grado.\r\n- Requiere autenticacion por API Key.\r\n- Body requerido: (JSON) : {\"nombre\": \"nombre del grado\"}.\r\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Obtener alumno por id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/alumno/grado/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alumno",
+								"grado",
+								"id",
+								"1"
+							]
+						},
+						"description": "- Obtiene datos de un alumno por GradoId.\r\n- Requiere autenticacion por API Key.\r\n- Requier id en url: /alumno/grado/id/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los grados",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/grado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"grado"
+							]
+						},
+						"description": "- Consulta todos los grados en la base de datos\r\n- Requiere autenticacion por API Key.\r\n- No requiere body."
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener grado por id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/grado/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"grado",
+								"1"
+							]
+						},
+						"description": "- Obtiene un grado por su id\r\n- Requiere autenticacion por API Key.\r\n- Requiere id en el url"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Eliminar grado por id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/grado/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"grado",
+								"6"
+							]
+						},
+						"description": "- Elimina un grado por su id.\r\n- Requiere autenticacion por API Key.\r\n- Parámetro en URL: id (ej: /grado/5)."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
