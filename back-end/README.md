@@ -15,26 +15,32 @@ Este proyecto es un backend desarrollado con **NestJS** y **TypeORM**, que permi
 
 ## Instalación
 
-1. Clona el repositorio y entra al proyecto:
+1. Crea la base de datos:
 
 ```
-git clone https://github.com/Brandon23-ai/EvaluacionNodeJs.git
-cd back-end
+crea una base de datos en MySQL llamada: alumnos_db
 ```
 
-2. Instala las dependencias:
+2. Clona el repositorio en la rama feature/BrandonMorales y entra a la carpeta back-end:
+
+```
+git clone -b feature/BrandonMorales <https://github.com/Brandon23-ai/EvaluacionNodeJs>
+
+```
+
+3. Instala las dependencias:
 
 ```
 npm install
 ```
 
-3. Modifica el archivo `.env` en la raíz del proyecto con el siguiente contenido:
+4. Modifica el archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
 ```env
 DB_HOST=localhost
 DB_PORT=3306
 DB_USERNAME=root
-DB_PASSWORD=tu_contrasenia <--- Aseurate de poner tu contrase;a para el usuario ROOT
+DB_PASSWORD=tu_contrasenia <--- Asegurate de poner tu contrase;a para el usuario ROOT
 DB_NAME=alumnos_db
 API_KEY=123456
 ```
